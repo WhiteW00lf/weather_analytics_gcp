@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: fct_daily_weather
+    description: "Daily weather facts including temperature, humidity, and precipitation."
+
+    columns:
+      - name: date
+        description: "The date of the weather observation."
+        tests:
+          - not_null
+
+
+      - name: country
+        description: "The country where the weather observation was recorded."
+        tests:
+          - not_null
+
+      - name: capital
+        description: "The capital city of the country where the weather observation was recorded."
+        tests:
+          - not_null
+
+      - name: lat
+        description: "The latitude of the location where the weather observation was recorded."
+        tests:
+          - not_null
+
+      - name: lon
+        description: "The longitude of the location where the weather observation was recorded."
+        tests:
+          - not_null
+
+      - name: temp_min_c
+        description: "The minimum temperature recorded on that date in Celsius."
+        tests:
+          - not_null
+
+      - name: temp_max_c
+        description: "The maximum temperature recorded on that date in Celsius."
+        tests:
+          - not_null
+
+      - name: temp_mean_c_approx
+        description: "The approximate mean temperature recorded on that date in Celsius."
+        tests:
+          - not_null
+
+      - name: rain_mm
+        description: "The total rainfall recorded on that date in millimeters."
+        tests:
+          - not_null
+
+      - name: snow_mm
+        description: "The total snowfall recorded on that date in millimeters."
+        tests:
+          - not_null
